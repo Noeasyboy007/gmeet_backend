@@ -1,17 +1,16 @@
 const mongoose = require('mongoose');
 
-const participantsSchema = new mongoose.Schema({
+const participantSchema = new mongoose.Schema({
     meetingId: {
         type: String,
         required: true
-    },  // Reference to the associated meeting
-
+    },
     email: {
         type: String,
         required: true
-    },  // Email ID of the participant
+    },
 });
 
-const participantsModel = mongoose.model('participants', participantsSchema);
+const Participant = mongoose.model('Participant', participantSchema);
 
-module.exports = participantsModel;
+module.exports = Participant;

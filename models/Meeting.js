@@ -7,11 +7,7 @@ const meetingSchema = new mongoose.Schema({
         unique: true
     },
     googleMeetLink: {
-        type: String
-    }, // Optional: Full Google Meet link
-    created_at: {
-        type: Date,
-        default: Date.now
+        type: String,
     },
     title: {
         type: String,
@@ -29,8 +25,12 @@ const meetingSchema = new mongoose.Schema({
         type: Date,
         required: true
     },
+    created_at: {
+        type: Date,
+        default: Date.now
+    }
 });
 
-const meetingModel = new mongoose.model('meeting', meetingSchema);
+const Meeting = mongoose.model('Meeting', meetingSchema);
 
-module.exports = meetingModel;
+module.exports = Meeting;

@@ -2,6 +2,7 @@ const express = require('express');
 const router = express.Router();
 const meetingController = require('../controllers/meetingController');
 
-router.post('/meetings', meetingController.saveMeetingData);
+// Route to save meeting data
+router.post('/save-meeting', meetingController.saveMeetingData);
 
 module.exports = router;
